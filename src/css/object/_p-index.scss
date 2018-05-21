@@ -1,0 +1,685 @@
+/*
+@include sp($point-sp) {}
+@include pc01($point-pc01) {}
+@include pc02($point-pc02) {}
+*/
+
+@charset "utf-8";
+.topPage {
+  .l-header {
+    &__btn {
+      @include sp($point-sp) {
+        position: fixed;
+        top: 0;
+        transform: translateY(0%);
+        transition: transform .5s;
+      }
+      &.is-close {
+        @include sp($point-sp) {
+          background-color: rgba(255, 255, 255, .9);
+        }
+      }
+      &.is-open {
+        @include sp($point-sp) {
+          background-color: rgba(255, 255, 255, 0);
+          transition: background-color .5s;
+        }
+      }
+      &.is-close.is-hide {
+        @include sp($point-sp) {
+          transform: translateY(-200%);
+        }
+      }
+    }
+  }
+  .spMainvisual {
+    @include sp($point-sp) {
+      display: block;
+      margin: 0 0 35px;
+    }
+    @include pc01($point-pc01) {
+      display: none;
+    }
+  }
+  .heroWrap {
+    @include sp($point-sp) {
+      display: none;
+    }
+    @include pc01($point-pc01) {
+      margin: 0 0 20px;
+      display: flex;
+      min-width: 1172px;
+    }
+    .hero {
+      &__left {
+        // @include sp($point-sp) {
+        //   display: none;
+        // }
+        @include pc01($point-pc01) {
+          width: 196px;
+        }
+      }
+      &__right {
+        // @include sp($point-sp) {
+        //   width: 100%;
+        // }
+        @include pc01($point-pc01) {
+          width: calc(100% - 196px);
+        }
+      }
+      &__logo {
+        display: flex;
+        align-items: center;
+        @include pc01($point-pc01) {
+          height: 50%;
+        }
+      }
+      &__message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        text-align: center;
+        color: #fff;
+        background: #0000c8;
+        height: 50%;
+        line-height: 1.8;
+        font-weight: bold;
+      }
+      &__slider {
+        .slider {
+          &__photo {}
+        }
+      }
+    }
+  }
+  .l-contents {
+    @include sp($point-sp) {
+      letter-spacing: 0.5px;
+    }
+    @include pc01($point-pc01) {
+      padding: 65px 50px 0;
+      display: flex;
+    }
+  }
+  .l-main {
+    @include sp($point-sp) {
+      padding: 0 20px;
+    }
+    @include pc01($point-pc01) {
+      width: calc(100% - 330px);
+      min-width: 742px;
+      padding: 0 50px 0 0;
+    }
+    .main {
+      &__logoWrap {
+        @include sp($point-sp) {
+          margin: 0 0 27px;
+        }
+        @include pc01($point-pc01) {
+          display: none;
+        }
+      }
+      &__menu {
+        @include sp($point-sp) {
+          display: block;
+          margin: 0 0 40px;
+        }
+        @include pc01($point-pc01) {
+          margin: 0 0 50px;
+          display: flex;
+          justify-content: space-between;
+        }
+        .menu {
+          &__item {
+            @include sp($point-sp) {
+              margin: 0 0 24px;
+            }
+            @include pc01($point-pc01) {
+              width: 22.5%;
+            }
+            &:last-child {
+              @include sp($point-sp) {
+                margin: 0;
+              }
+            }
+            a {
+              @include sp($point-sp) {
+                display: flex;
+                flex-wrap: wrap;
+              }
+              @include pc01($point-pc01) {
+                display: block;
+              }
+              &:hover {
+                @include pc01($point-pc01) {
+                  text-decoration: none;
+                }
+                img {
+                  @include pc01($point-pc01) {
+                    background-color: transparent;
+                  }
+                }
+              }
+            }
+            .item {
+              &__photo {
+                @include sp($point-sp) {
+                  order: 2;
+                  width: 100%;
+                }
+                img {
+                  display: block;
+                }
+              }
+              &__text {
+                @include sp($point-sp) {
+                  order: 1;
+                  color: $main-color;
+                  border-bottom: 1px solid $main-color;
+                  font-size: 12px;
+                  font-weight: normal;
+                  width: 100%;
+                  margin: 0 0 10px;
+                  padding: 0 0 5px;
+                }
+                @include pc01($point-pc01) {
+                  background: #0000c8;
+                  color: #fff;
+                  height: 75px;
+                  text-align: center;
+                  font-size: 15px;
+                  line-height: 1.5;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+              }
+            }
+          }
+        }
+      }
+      &__newsWrap {
+        @include sp($point-sp) {
+          background: #f5faf8;
+          border: 1px solid $main-color;
+          padding: 13px 20px 4px;
+          margin: 0 0 35px;
+        }
+        @include pc01($point-pc01) {
+          background: #e1f0fa;
+          padding: 40px 20px;
+          margin: 0 0 50px;
+        }
+        .newsWrap {
+          &__title {
+            @include sp($point-sp) {
+              font-size: 12px;
+              margin: 0 0 5px;
+            }
+            @include pc01($point-pc01) {
+              text-align: center;
+              font-size: 20px;
+              margin: 0 0 18px;
+            }
+          }
+        }
+        .news {
+          &__list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @include sp($point-sp) {
+              font-size: 12px;
+            }
+            @include pc01($point-pc01) {}
+            &Item {
+              @include sp($point-sp) {
+                border-top: 1px solid $main-color;
+                padding: 13px 0 12px;
+                width: 100%;
+                line-height: 1.7;
+              }
+              @include pc01($point-pc01) {
+                background: #fff;
+                flex: 1;
+                margin: 20px 1.6% 0;
+                min-width: 30%;
+                padding: 21px 20px 23px;
+                line-height: 1.8;
+              }
+              a {
+                display: block;
+                @include sp($point-sp) {}
+                @include pc01($point-pc01) {}
+                &:hover {
+                  text-decoration: none;
+                }
+              }
+              .item {
+                &__title {
+                  line-height: 1.5;
+                  @include sp($point-sp) {
+                    font-weight: bold;
+                    margin: 0 0 1px;
+                  }
+                  @include pc01($point-pc01) {
+                    font-size: 17px;
+                    margin: 0 0 15px;
+                  }
+                }
+                &__text {
+                  @include sp($point-sp) {
+                    font-weight: normal;
+                    line-height: 1.8;
+                  }
+                  @include pc01($point-pc01) {
+                    font-size: 16px;
+                    font-weight: normal;
+                    line-height: 1.7;
+                  }
+                }
+              }
+            }
+            &Date {
+              display: block;
+              margin-bottom: 8px;
+            }
+          }
+        }
+      }
+      &__blogWrap {
+        background: #e1f0fa;
+        @include sp($point-sp) {
+          display: none;
+        }
+        @include pc01($point-pc01) {
+          padding: 40px 20px 0;
+          margin: 0 0 50px;
+        }
+        .blogWrap {
+          &__title {
+            @include sp($point-sp) {}
+            @include pc01($point-pc01) {
+              text-align: center;
+              font-size: 20px;
+              margin: 0 0 16px;
+              letter-spacing: 4px;
+            }
+          }
+        }
+        .blog {
+          &__list {
+            @include sp($point-sp) {}
+            @include pc01($point-pc01) {
+              display: flex;
+              justify-content: space-between;
+              flex-wrap: wrap;
+            }
+            &Item {
+              @include sp($point-sp) {}
+              @include pc01($point-pc01) {
+                background: #fff;
+                flex: 1;
+                margin: 20px 1.6% 0;
+                min-width: 30%;
+              }
+              a {
+                @include sp($point-sp) {}
+                @include pc01($point-pc01) {
+                  display: block;
+                  padding: 20px;
+                }
+                &:hover {
+                  @include pc01($point-pc01) {
+                    text-decoration: none;
+                  }
+                }
+              }
+              .item {
+                &__title {
+                  @include sp($point-sp) {}
+                  @include pc01($point-pc01) {
+                    line-height: 1.5;
+                    font-size: 17px;
+                    margin: 0 0 10px;
+                  }
+                }
+                &__date {
+                  @include pc01($point-pc01) {
+                    display: block;
+                    font-weight: normal;
+                    margin: 0 0 17px;
+                  }
+                }
+                &__photo {
+                  @include pc01($point-pc01) {
+                    width: 100%;
+                    position: relative;
+                    overflow: hidden;
+                  }
+                  &::before {
+                    @include pc01($point-pc01) {
+                      display: block;
+                      content: "";
+                      padding-top: 90%;
+                    }
+                  }
+                  img {
+                    @include pc01($point-pc01) {
+                      position: absolute;
+                      min-width: 100%;
+                      min-height: 100%;
+                      top: 50%;
+                      left: 0;
+                      transform: translateY(-50%);
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &__link {
+            @include pc01($point-pc01) {
+              text-align: right;
+              padding: 28px 0;
+            }
+            a {
+              &:hover {
+                @include pc01($point-pc01) {
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      &__rankingWrap {
+        @include sp($point-sp) {}
+        @include pc01($point-pc01) {
+          margin: 0 0 75px;
+        }
+        .rankingWrap__title {
+          @include sp($point-sp) {
+            font-size: 12px;
+            border-bottom: 1px solid $main-color;
+            margin: 0 0 28px;
+            padding: 0 0 5px;
+          }
+          @include pc01($point-pc01) {
+            text-align: center;
+            font-size: 20px;
+            margin: 0 0 35px;
+          }
+        }
+        .ranking {
+          &__list {
+            display: flex;
+            @include sp($point-sp) {
+              flex-wrap: wrap;
+              justify-content: center;
+            }
+            &Item {
+              text-align: center;
+              @include sp($point-sp) {
+                width: 44.6%;
+                margin: 0 2.7% 17px;
+              }
+              @include pc01($point-pc01) {
+                width: 20%;
+              }
+              a {
+                display: block;
+                @include sp($point-sp) {
+                  position: relative;
+                }
+                @include pc01($point-pc01) {}
+                &:hover {
+                  @include pc01($point-pc01) {
+                    text-decoration: none;
+                  }
+                }
+              }
+              .item {
+                &__photo {
+                  width: 100%;
+                  position: relative;
+                  border-radius: 50%;
+                  overflow: hidden;
+                  @include sp($point-sp) {
+                    margin: 0 0 5px;
+                  }
+                  &::before {
+                    display: block;
+                    content: "";
+                    padding-top: 100%;
+                  }
+                  img {
+                    position: absolute;
+                    height: 100%;
+                    width: auto;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                  }
+                }
+                &__ranking {
+                  display: block;
+                  z-index: 1;
+                  @include sp($point-sp) {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 30px;
+                    height: 30px;
+                  }
+                  @include pc01($point-pc01) {
+                    text-align: center;
+                    margin: -10px 0 7px;
+                    width: 46px;
+                    height: 46px;
+                  }
+                }
+                &__productName {
+                  line-height: 1.5;
+                  @include sp($point-sp) {
+                    font-size: 12px;
+                    font-weight: normal;
+                    letter-spacing: 0;
+                  }
+                  @include pc01($point-pc01) {
+                    font-size: 14px;
+                    letter-spacing: 0.5px;
+                  }
+                }
+              }
+              &:nth-child(1) {
+                .item__ranking {
+                  background: url(http://sorrykoubou.jp/shop-pro/img/top/number1.svg);
+                }
+              }
+              &:nth-child(2) {
+                .item__ranking {
+                  background: url(http://sorrykoubou.jp/shop-pro/img/top/number2.svg);
+                }
+              }
+              &:nth-child(3) {
+                .item__ranking {
+                  background: url(http://sorrykoubou.jp/shop-pro/img/top/number3.svg);
+                }
+              }
+              &:nth-child(4) {
+                .item__ranking {
+                  background: url(http://sorrykoubou.jp/shop-pro/img/top/number4.svg);
+                }
+              }
+              &:nth-child(5) {
+                .item__ranking {
+                  background: url(http://sorrykoubou.jp/shop-pro/img/top/number5.svg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .l-footer {
+    position: relative;
+    @include sp($point-sp) {}
+    @include pc01($point-pc01) {
+      min-width: 1172px;
+    }
+    .l-pagetop {
+      @include pc01($point-pc01) {
+        right: 0;
+        z-index: 100;
+        border: 1px solid #fff;
+        border-radius: 2px;
+      }
+    }
+    &__menu {
+      display: block;
+      @include sp($point-sp) {
+        font-size: 11px;
+        margin: 21px 0 24px;
+      }
+      @include pc01($point-pc01) {
+        padding: 0 50px 0 81px;
+      }
+    }
+    &__rule {
+      background: #0000c8;
+      color: #fff;
+      display: block;
+      @include sp($point-sp) {
+        font-size: 10px;
+        margin: 0 20px;
+        line-height: 25px;
+        text-align: center;
+      }
+      @include pc01($point-pc01) {
+        height: 75px;
+        line-height: 75px;
+        position: relative;
+        padding: 0 83px;
+        font-size: 17px;
+      }
+      .rule__link {
+        display: inline-block;
+        @include sp($point-sp) {
+          margin: 0 0 0 10px;
+        }
+        @include pc01($point-pc01) {
+          margin: 0 0 0 20px;
+        }
+        a {
+          color: #fff;
+          border-bottom: 1px solid #fff;
+          @include sp($point-sp) {
+            padding: 0 0 2px;
+          }
+          @include pc01($point-pc01) {
+            padding: 0 0 5px;
+          }
+          &:hover {
+            text-decoration: none;
+            border-color: transparent;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    &__navBox {
+      @include sp($point-sp) {}
+      @include pc01($point-pc01) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 40px 0;
+      }
+    }
+    &__nav {
+      display: flex;
+      @include sp($point-sp) {
+        justify-content: center;
+      }
+      &List {
+        &__col2 {
+          list-style: none;
+          @include sp($point-sp) {
+            margin: 0 20px 0 0;
+          }
+          @include pc01($point-pc01) {
+            margin: 0 110px 0 0;
+          }
+          &:last-child {
+            @include sp($point-sp) {
+              margin: 0;
+            }
+          }
+        }
+      }
+      &Item {
+        @include sp($point-sp) {}
+        @include pc01($point-pc01) {}
+        a {
+          display: inline-block;
+          font-weight: normal;
+          @include sp($point-sp) {
+            padding: 4px 0;
+            letter-spacing: 0.5px;
+          }
+          @include pc01($point-pc01) {
+            color: #0000c8;
+            font-size: 16px;
+            padding: 7px 0;
+          }
+          &:hover {
+            @include pc01($point-pc01) {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    &__externalLink {
+      &__list {
+        @include sp($point-sp) {
+          display: none;
+        }
+        @include pc01($point-pc01) {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 280px;
+        }
+        .externalLink {
+          &__list {
+            &Item {
+              @include sp($point-sp) {}
+              @include pc01($point-pc01) {}
+              &.logo {
+                @include pc01($point-pc01) {
+                  margin: 0 71px 0 0;
+                }
+                img {
+                  @include pc01($point-pc01) {
+                    width: 96px;
+                  }
+                }
+              }
+              &.sns {
+                @include pc01($point-pc01) {
+                  width: 40px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

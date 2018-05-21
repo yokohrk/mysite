@@ -1,0 +1,1799 @@
+@charset "utf-8";
+
+/*
+@include sp($point-sp) {}
+@include tb($point-tb) {}
+@include pc01($point-pc01) {}
+@include pc02($point-pc02) {}
+*/
+
+.section {
+  &__ttlGroup {
+    &__ttl {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      @include sp($point-sp) {
+        text-align: left;
+        font-size: 12px;
+      }
+      >span {
+        display: inline-block;
+        vertical-align: middle;
+        width: 25px;
+        height: 25px;
+        line-height: 23px;
+        margin-right: 10px;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 0;
+        border: 1px solid $main-color;
+        border-radius: 50%;
+        @include sp($point-sp) {
+          width: 20px;
+          height: 20px;
+          line-height: 17px;
+          font-size: 11px;
+        }
+      }
+    }
+    &__description {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.7;
+      @include sp($point-sp) {
+        text-align: left;
+        font-size: 12px;
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: 500px;
+        height: 1px;
+        margin: 10px auto 30px;
+        background-color: $main-color;
+        @include sp($point-sp) {
+          width: 100%;
+          margin: 5px auto 10px;
+        }
+      }
+      &--red {
+        color: #ff0000;
+      }
+    }
+  }
+  &__caution {
+    padding: 17px 7px 20px;
+    border-top: 1px solid $main-color;
+    border-bottom: 1px solid $main-color;
+    @include sp($point-sp) {
+      padding: 0;
+      border-top: none;
+      border-bottom: none;
+    }
+    &__ttl {
+      font-size: 18px;
+      @include sp($point-sp) {
+        font-size: 12px;
+      }
+    }
+    &__list {
+      margin-top: 10px;
+      font-size: 14px;
+      @include sp($point-sp) {
+        font-size: 12px;
+      }
+      >li {
+        letter-spacing: 0.07em;
+        text-indent: -1em;
+        margin-left: 1em;
+        line-height: 1.5;
+      }
+      >li+li {
+        margin-top: 10px;
+      }
+    }
+  }
+  &__inner {
+    margin: 0 auto;
+    @include sp($point-sp) {
+      width: 100%;
+      padding: 60px 20px 0;
+    }
+    @include pc01($point-pc01) {
+      width: 964px;
+      padding: 120px 60px 30px;
+    }
+  }
+  &__orderChange {
+    @include sp($point-sp) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .order01 {
+      @include sp($point-sp) {
+        order: 1;
+      }
+    }
+    .order02 {
+      @include sp($point-sp) {
+        order: 2;
+      }
+    }
+  }
+  &__text {
+    width: 100%;
+    @include sp($point-sp) {
+      line-height: 1.9;
+      font-weight: normal;
+      text-align: left;
+      font-size: 14px;
+      margin: 0 0 20px;
+    }
+    @include pc01($point-pc01) {
+      line-height: 2;
+      text-align: center;
+      font-size: 18px;
+      margin: 0 0 60px;
+    }
+    &__withBorder {
+      display: inline-block;
+      border: 1px solid $main-color;
+      line-height: 34px;
+      height: 36px;
+      padding: 0 15px;
+      margin-top: 5px;
+    }
+    &__withUnderLine {
+      border-bottom: 1px solid $main-color;
+      line-height: 1.5;
+      padding: 0 0 6px;
+      @include sp($point-sp) {
+        text-align: center;
+        font-weight: bold;
+      }
+      @include pc01($point-pc01) {
+        width: 500px;
+        margin: 0 auto 6px;
+      }
+    }
+    &.plusMargin {
+      @include pc01($point-pc01) {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+      }
+    }
+    .text__sub {
+      @include sp($point-sp) {
+        font-size: 10px;
+      }
+      @include pc01($point-pc01) {
+        font-size: 14px;
+      }
+      &.center {
+        text-align: center;
+      }
+    }
+    .red {
+      color: #ed1c24;
+    }
+    p {
+      @include sp($point-sp) {
+        margin: 0 0 20px;
+      }
+      @include pc01($point-pc01) {
+        margin: 0 0 36px;
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+    a {
+      padding: 0 0 4px;
+      border-bottom: 1px solid;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    sup {
+      @include sp($point-sp) {
+        font-size: 8px;
+      }
+      @include pc01($point-pc01) {
+        font-size: 10px;
+      }
+    }
+    &__underline {
+      display: block;
+      width: 500px;
+      padding-bottom: 10px;
+      margin: 0 auto !important;
+      text-align: center;
+      font-size: 18px;
+      border-bottom: 1px solid $main-color;
+      @include sp($point-sp) {
+        width: 100%;
+        margin: 0 auto 10px !important;
+        font-weight: bold;
+        text-align: left;
+        font-size: 12px;
+      }
+      &+.section__text__icnTitle {
+        margin-top: 30px;
+        @include sp($point-sp) {
+          margin-top: 10px;
+        }
+      }
+    }
+    &__icnTitle {
+      margin-bottom: 55px;
+      text-align: center;
+      font-size: 18px;
+      @include sp($point-sp) {
+        margin-bottom: 10px;
+        font-size: 12px;
+        text-align: left;
+        font-weight: normal;
+        text-indent: -3em;
+        margin-left: 3em !important;
+      }
+    }
+  }
+  &__table {
+    &__subinfolist {
+      @include sp($point-sp) {
+        padding: 10px 0;
+      }
+      >dd {
+        margin-top: 5px;
+        &+dt {
+          margin-top: 20px;
+          @include sp($point-sp) {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed $main-color;
+          }
+        }
+      }
+    }
+    &__caution {
+      text-align: left;
+      font-size: 14px;
+      border-bottom: none !important;
+      @include sp($point-sp) {
+        margin-top: 10px;
+        font-size: 10px;
+        text-align: right;
+        font-weight: normal;
+      }
+      >td {
+        padding: 20px 0;
+        letter-spacing: 0;
+      }
+    }
+  }
+  &__photo {
+    @include sp($point-sp) {
+      margin: 0 0 10px;
+      width: 100%;
+    }
+    @include pc01($point-pc01) {
+      margin: 0 0 50px;
+    }
+  }
+  //↓PC・SP共に2列以上のレイアウトの場合
+  &__flexBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &.col2 {
+      &>* {
+        width: 48%;
+      }
+      &.PCw47per {
+        &>* {
+          @include pc01($point-pc01) {
+            width: 47%;
+          }
+        }
+      }
+    }
+    &.col4 {
+      &>* {
+        width: 22%;
+      }
+    }
+    &.PCcol2 {
+      &>* {
+        @include pc01($point-pc01) {
+          width: 48%;
+        }
+      }
+    }
+    &.PCcol4 {
+      @include pc01($point-pc01) {
+        margin: 0 -2%;
+        justify-content: initial;
+      }
+      &>* {
+        @include pc01($point-pc01) {
+          width: 21%;
+        }
+      }
+      .section__box {
+        @include pc01($point-pc01) {
+          margin: 0 2% 21px;
+        }
+      }
+    }
+    &.SPcol3 {
+      @include sp($point-sp) {
+        margin: 0 -2%;
+        justify-content: initial;
+      }
+      &>* {
+        @include sp($point-sp) {
+          width: 30%;
+        }
+      }
+      .section__box {
+        @include sp($point-sp) {
+          margin: 0 1.6% 10px;
+        }
+      }
+    }
+    &.PCfloatR {
+      @include pc01($point-pc01) {
+        float: right;
+        width: 786px;
+        margin: 0 0 90px;
+      }
+    }
+    &.PCcenter {
+      @include pc01($point-pc01) {
+        justify-content: center;
+      }
+    }
+  }
+  //↑PC・SP共に2列以上のレイアウトの場合
+  //↓PCのみ2列以上のレイアウトの場合
+  &__PCflexBox {
+    @include pc01($point-pc01) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &.col2 {
+      &>* {
+        @include pc01($point-pc01) {
+          width: 48%;
+        }
+      }
+    }
+    &.col4 {
+      &>* {
+        @include pc01($point-pc01) {
+          width: 22%;
+        }
+      }
+    }
+  }
+  //↑PCのみ2列以上のレイアウトの場合
+  &__clearfix {
+    @extend .clearfix;
+  }
+  &__btn {
+    text-align: center;
+    margin: 0 auto;
+  }
+  &__box {
+    text-align: center;
+    width: 100%;
+    @include sp($point-sp) {
+      font-size: 12px;
+      margin: 0 0 12px;
+    }
+    @include pc01($point-pc01) {
+      font-size: 18px;
+      margin: 0 0 15px;
+    }
+    a {
+      display: block;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .box {
+      &__title {
+        @include sp($point-sp) {
+          font-size: 12px;
+          line-height: 1.2;
+        }
+        @include pc01($point-pc01) {
+          line-height: 1.4;
+        }
+      }
+      &__photo {
+        @include sp($point-sp) {
+          margin: 0 0 5px;
+        }
+        @include pc01($point-pc01) {
+          margin: 0 0 15px;
+        }
+        &Wrap {
+          position: relative;
+        }
+      }
+      &__text {
+        font-weight: normal;
+        @include sp($point-sp) {
+          font-size: 12px;
+        }
+        @include pc01($point-pc01) {
+          line-height: 2;
+          font-size: 15px;
+        }
+        .text__sub {
+          @include sp($point-sp) {
+            font-size: 8px;
+          }
+          @include pc01($point-pc01) {
+            font-size: 14px;
+          }
+        }
+      }
+      &__note {
+        position: absolute;
+        border-radius: 50%;
+        color: #fff;
+        letter-spacing: 0.5px;
+        @include sp($point-sp) {
+          width: 28px;
+          height: 28px;
+          right: 0;
+          bottom: -14px;
+          line-height: 28px;
+          font-size: 7px;
+        }
+        @include pc01($point-pc01) {
+          width: 60px;
+          height: 60px;
+          right: -30px;
+          bottom: -30px;
+          line-height: 60px;
+          font-size: 15px;
+        }
+        &--typeA {
+          background: #0000c8;
+        }
+        &--typeB {
+          background: #69cf00;
+        }
+      }
+    }
+    &--typeA {
+      background: #f5faf8;
+      border: 1px solid #0000c8;
+      @include sp($point-sp) {
+        padding: 15px 15px 12px;
+        line-height: 1.8;
+      }
+      @include pc01($point-pc01) {
+        padding: 20px 20px 30px;
+        line-height: 2;
+      }
+      .box {
+        &__title {
+          @include sp($point-sp) {
+            text-align: left;
+            font-size: 12px;
+            margin: 0 0 4px;
+          }
+          @include pc01($point-pc01) {
+            border-bottom: 1px solid;
+            line-height: 1.4;
+            margin: 0 42px;
+            padding: 0 0 16px;
+          }
+        }
+      }
+    }
+    &--typeB {
+      line-height: 1.5;
+    }
+    &--typeC {
+      @include sp($point-sp) {
+        margin: 0 0 8px;
+      }
+      @include pc01($point-pc01) {
+        margin: 0 0 30px;
+        background: #f5faf8;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        @include sp($point-sp) {
+          position: relative;
+        }
+      }
+      .box {
+        &__wrap {
+          @include sp($point-sp) {
+            width: 31%;
+          }
+          @include pc01($point-pc01) {
+            padding: 15px 15px 12px 15px;
+          }
+        }
+        &__title {
+          @include sp($point-sp) {
+            padding: 5px 0 0;
+          }
+          @include pc01($point-pc01) {
+            border: none;
+            margin: 0;
+            padding: 0;
+          }
+          &.long {
+            @include sp($point-sp) {
+              width: calc(100vw - 40px);
+              text-align: left;
+            }
+          }
+        }
+        &__photo {
+          @include sp($point-sp) {
+            margin: 0;
+            position: relative;
+          }
+          @include pc01($point-pc01) {
+            width: 376px;
+            height: auto;
+            margin: 0 0 9px;
+          }
+          &::before {
+            @include sp($point-sp) {
+              content: "";
+              width: calc(100vw - 40px);
+              height: 100%;
+              position: absolute;
+              background: #f5faf8;
+              top: 0;
+              left: 0;
+              z-index: -2;
+            }
+          }
+        }
+        &__textWrap {
+          font-weight: normal;
+          text-align: left;
+          @include sp($point-sp) {
+            width: 70%;
+            z-index: -1;
+            padding: 0 6px;
+            font-size: 10px;
+            position: absolute;
+            right: 0;
+            top: calc(50% - 9px);
+            transform: translateY(-50%);
+          }
+          @include pc01($point-pc01) {
+            font-size: 16px;
+            padding: 45px 31px 45px 21px;
+          }
+        }
+        &__list {
+          @include sp($point-sp) {}
+          @include pc01($point-pc01) {
+            line-height: 2;
+          }
+          &Title {
+            @include sp($point-sp) {
+              margin: 0 0 8px;
+            }
+            @include pc01($point-pc01) {
+              margin: 0 0 20px;
+            }
+          }
+          &Item {
+            position: relative;
+            letter-spacing: 0;
+            @include sp($point-sp) {
+              padding: 0 0 0 10px;
+              line-height: 1.5;
+            }
+            @include pc01($point-pc01) {
+              padding: 0 0 0 18px;
+              line-height: 1.5;
+              margin: 0 0 8px;
+            }
+            &::before {
+              position: absolute;
+              left: 0;
+              @include sp($point-sp) {
+                content: "●";
+              }
+              @include pc01($point-pc01) {
+                content: "・";
+              }
+            }
+          }
+          // &.SPinline {
+          //   .box__listItem {
+          //     @include sp($point-sp) {
+          //       padding: 0 0 0 12px;
+          //       display: inline;
+          //     }
+          //     &::before {
+          //       @include sp($point-sp) {
+          //         content: "/";
+          //         left: 3px;
+          //       }
+          //     }
+          //     &:first-child {
+          //       @include sp($point-sp) {
+          //         padding: 0;
+          //       }
+          //       &::before {
+          //         @include sp($point-sp) {
+          //           display: none;
+          //         }
+          //       }
+          //     }
+          //   }
+          // }
+        }
+      }
+      &--02 {
+        .box {
+          &__wrap {
+            @include sp($point-sp) {
+              width: 48%;
+            }
+          }
+          &__textWrap {
+            @include sp($point-sp) {
+              width: 52%;
+            }
+          }
+        }
+      }
+    }
+    &--typeD {
+      @include sp($point-sp) {
+        margin-bottom: 8px !important;
+      }
+      @include pc01($point-pc01) {
+        padding: 15px 15px 12px 15px;
+        margin: 0 0 30px;
+        background: #f5faf8;
+      }
+      .box {
+        &__title {
+          @include sp($point-sp) {}
+          @include pc01($point-pc01) {
+            border: none;
+            margin: 0;
+            padding: 0;
+          }
+        }
+        &__photo {
+          @include sp($point-sp) {}
+          @include pc01($point-pc01) {
+            margin: 0 0 11px;
+          }
+        }
+      }
+    }
+    &--typeE {
+      .box {
+        &__title {
+          @include sp($point-sp) {}
+          @include pc01($point-pc01) {}
+        }
+        &__photo {
+          @include sp($point-sp) {}
+          @include pc01($point-pc01) {
+            margin: 0 0 20px;
+          }
+        }
+      }
+    }
+  }
+  &__hr {
+    height: 1px;
+    background: $main-color;
+    border: none;
+  }
+  &__list {
+    font-weight: normal;
+    line-height: 1.8;
+    .listItem {
+      @include sp($point-sp) {
+        margin: 0 0 10px;
+      }
+    }
+  }
+  &__link {
+    .link {
+      &__list {
+        font-weight: normal;
+        text-align: left;
+        @include sp($point-sp) {
+          font-size: 10px;
+          padding: 0 20px;
+        }
+        @include pc01($point-pc01) {
+          font-size: 15px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .listItem {
+          @include sp($point-sp) {
+            line-height: 1.8;
+          }
+          @include pc01($point-pc01) {
+            line-height: 2.4;
+            margin: 0 30px 0 0;
+            display: flex;
+          }
+          &:last-child {
+            @include pc01($point-pc01) {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__diagram {
+    @include sp($point-sp) {
+      padding: 23px 0 20px;
+    }
+    @include pc01($point-pc01) {
+      display: flex;
+      margin: 0 0 65px;
+    }
+    a {
+      text-decoration: none;
+      .diagram__circle {
+        opacity: 1;
+        transition: opacity .3s;
+      }
+      &:hover {
+        .diagram__circle {
+          opacity: .7;
+        }
+      }
+    }
+    .diagram {
+      &__circle {
+        &--text {
+          @include sp($point-sp) {
+            font-size: 10px;
+            border-bottom: 1px solid $main-color;
+            display: inline-block;
+            margin: 15px auto 0;
+            padding: 0 0 3px;
+          }
+          @include pc01($point-pc01) {
+            border: 1px solid $main-color;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 186px;
+            height: 186px;
+            text-align: center;
+            line-height: 1.5;
+          }
+          &.is-title {
+            @include sp($point-sp) {
+              width: 100%;
+              text-align: left;
+              margin: 0 auto 15px;
+            }
+          }
+        }
+        img {
+          border-radius: 50%;
+          @include sp($point-sp) {
+            width: 100%;
+            margin: 0 0 10px;
+          }
+          @include pc01($point-pc01) {
+            width: 186px;
+            height: 186px;
+            margin: 0 0 20px;
+          }
+        }
+      }
+      &__text {
+        text-align: center;
+        @include sp($point-sp) {
+          font-size: 12px;
+          width: 100%;
+        }
+        @include pc01($point-pc01) {
+          font-size: 17px;
+        }
+      }
+    }
+    &--typeA {
+      @include pc01($point-pc01) {
+        align-items: center;
+      }
+      .diagram {
+        &__product {
+          display: inline-block;
+          position: relative;
+          @include sp($point-sp) {
+            width: 33%;
+            margin: 0 25px 0 0;
+          }
+          @include pc01($point-pc01) {
+            width: 186px;
+            margin: 0 50px 0 0;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            background: url(http://sorrykoubou.jp/shop-pro/img/sub/diagram_plus.svg);
+            @include sp($point-sp) {
+              width: 15px;
+              height: 15px;
+              right: -22px;
+              top: 50%;
+              transform: translateY(-100%);
+            }
+            @include pc01($point-pc01) {
+              width: 30px;
+              height: 30px;
+              right: -40px;
+              top: 78px;
+            }
+          }
+          &:last-child {
+            margin: 0;
+            &::after {
+              display: none;
+            }
+          }
+          a {
+            transition: none;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+        &__arrow {
+          @include sp($point-sp) {
+            width: 100%;
+            text-align: center;
+            padding: 12px 0 25px;
+          }
+          @include pc01($point-pc01) {
+            margin: -36px 50px 0;
+          }
+          img {
+            @include sp($point-sp) {
+              width: 45px;
+              height: 21px;
+              transform: rotate(90deg);
+            }
+            @include pc01($point-pc01) {
+              width: 90px;
+              height: 42px;
+            }
+          }
+        }
+        &__leftBox {
+          @include sp($point-sp) {
+            text-align: center;
+          }
+          @include pc01($point-pc01) {
+            display: flex;
+          }
+        }
+        &__rightBox {
+          @include sp($point-sp) {
+            font-size: 10px;
+          }
+          @include pc01($point-pc01) {
+            font-size: 20px;
+            margin: -36px 0 0;
+            line-height: 1.8;
+            width: 232px;
+          }
+        }
+      }
+    }
+    &--typeB {
+      @include sp($point-sp) {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      @include pc01($point-pc01) {
+        width: 660px;
+        align-items: flex-start;
+        margin: 0 auto 65px;
+      }
+      .diagram__box,
+      .diagram__circle--text {
+        @include sp($point-sp) {
+          margin: 0 5% 0 0;
+        }
+        @include pc01($point-pc01) {
+          margin: 0 50px 0 0;
+        }
+        &:last-child {
+          margin: 0;
+        }
+      }
+      .diagram {
+        &__box {
+          @include sp($point-sp) {
+            width: 30%;
+          }
+        }
+      }
+    }
+    &--typeC {
+      @include sp($point-sp) {
+        width: 100%;
+        text-align: center;
+      }
+      @include pc01($point-pc01) {
+        width: 660px;
+        align-items: flex-start;
+        margin: 0 auto 65px;
+      }
+      .diagram__box,
+      .diagram__circle--text {
+        @include pc01($point-pc01) {
+          margin: 0 50px 0 0;
+        }
+        &:last-child {
+          @include pc01($point-pc01) {
+            margin: 0;
+          }
+        }
+      }
+      .diagram {
+        &__box {
+          a {
+            @include sp($point-sp) {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+          }
+        }
+        &__circle {
+          @include sp($point-sp) {
+            width: 30%;
+          }
+        }
+        &__text {
+          @include sp($point-sp) {
+            text-align: left;
+            border-bottom: 1px solid $main-color;
+            font-size: 12px;
+            padding: 0 0 10px;
+          }
+          &Wrap {
+            @include sp($point-sp) {
+              text-align: left;
+              width: 60%;
+            }
+          }
+          &__sub {
+            line-height: 1.5;
+            @include sp($point-sp) {
+              font-size: 12px;
+              padding: 10px 0 0;
+            }
+            @include pc01($point-pc01) {
+              font-size: 14px;
+              text-align: center;
+              margin: 15px 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__menu {
+    border: 1px solid $main-color;
+    border-style: solid none solid;
+    display: flex;
+    @include sp($point-sp) {
+      justify-content: space-between;
+    }
+    @include pc01($point-pc01) {}
+    .menu {
+      &__item {
+        position: relative;
+        @include sp($point-sp) {
+          font-size: 10px;
+          line-height: 30px;
+        }
+        @include pc01($point-pc01) {
+          flex: 1;
+          line-height: 48px;
+          font-size: 18px;
+          text-align: center;
+        }
+        &::before {
+          @include sp($point-sp) {}
+          @include pc01($point-pc01) {
+            content: "";
+            width: 1px;
+            height: 28px;
+            position: absolute;
+            background: $main-color;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        &:first-child {
+          &::before {
+            display: none;
+          }
+        }
+        a {
+          width: 100%;
+          display: block;
+          @include sp($point-sp) {
+            padding: 0 13px;
+          }
+          @include pc01($point-pc01) {}
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        label {
+          @include pc01($point-pc01) {
+            display: inline;
+          }
+        }
+        .searchIcon {
+          @include pc01($point-pc01) {
+            display: inline;
+          }
+        }
+        .categoryMenu {
+          position: absolute;
+          left: 0;
+          @include sp($point-sp) {
+            width: calc(100vw - 40px);
+            top: 31px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
+          @include pc01($point-pc01) {
+            width: 100%;
+            top: 49px;
+          }
+          a {
+            @include sp($point-sp) {
+              padding: 0 13px;
+            }
+          }
+          .listItem {
+            background: #fff;
+            border-bottom: 1px solid $main-color;
+            @include sp($point-sp) {
+              width: 44%;
+            }
+          }
+        }
+        input[type="text"] {
+          font-weight: normal;
+          color: $main-color;
+          @include sp($point-sp) {
+            display: none;
+            font-size: 12px;
+            padding: 0 0 0 35px;
+            width: 100%;
+          }
+          @include pc01($point-pc01) {
+            font-size: 18px;
+            padding: 0 0 0 35px;
+            width: calc(100% - 35px);
+          }
+          &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: rgba(0, 0, 200, .5);
+          }
+          &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: rgba(0, 0, 200, .5);
+          }
+          &:-ms-input-placeholder {
+            /* IE 10+ */
+            color: rgba(0, 0, 200, .5);
+          }
+          &:-moz-placeholder {
+            /* Firefox 18- */
+            color: rgba(0, 0, 200, .5);
+          }
+        }
+      }
+    }
+    &.menuOn {
+      position: relative;
+      z-index: 200;
+      .c-icon--search {
+        @include sp($point-sp) {
+          opacity: .05;
+          transition: opacity .5s;
+        }
+      }
+    }
+    &.searchOn {
+      @include sp($point-sp) {
+        position: relative;
+        z-index: 200;
+        .searchArea {
+          width: 100%;
+          label {
+            display: inline;
+          }
+          .searchIcon {
+            display: inline;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -100;
+          }
+          .c-icon--search {
+            display: inline;
+            &::before {
+              left: 0;
+            }
+          }
+        }
+        input[type="text"] {
+          display: inline;
+        }
+        .categoryMenu__parent {
+          display: none;
+        }
+      }
+    }
+  }
+  &__weekFlow {
+    @include sp($point-sp) {
+      overflow: hidden;
+      padding: 24px 0 0;
+      margin: 0 0 23px;
+    }
+    @include pc01($point-pc01) {
+      margin: 108px 0 57px;
+    }
+    .weekFlow {
+      &__head {
+        display: flex;
+        justify-content: space-between;
+        @include sp($point-sp) {
+          font-size: 14px;
+          margin: 0 0 22px;
+        }
+        @include pc01($point-pc01) {
+          font-size: 28px;
+          margin: 0 0 44px;
+        }
+        span {
+          display: inline-block;
+          @include sp($point-sp) {
+            padding: 0 5px;
+          }
+          @include pc01($point-pc01) {
+            padding: 0 10px;
+          }
+        }
+        .shippingDay {
+          position: relative;
+          &::before {
+            content: "発送日";
+            position: absolute;
+            display: block;
+            width: 130%;
+            text-align: center;
+            @include sp($point-sp) {
+              font-size: 9px;
+              top: -20px;
+              left: -3px;
+            }
+            @include pc01($point-pc01) {
+              font-size: 18px;
+              top: -38px;
+              left: -6px;
+            }
+          }
+          &::after {
+            content: "";
+            border: 1.5px solid;
+            border-radius: 50%;
+            position: absolute;
+            background: url();
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            @include sp($point-sp) {
+              width: 25px;
+              height: 25px;
+            }
+            @include pc01($point-pc01) {
+              width: 50px;
+              height: 50px;
+            }
+          }
+          &--typeA {
+            color: #8cc63f;
+          }
+          &--typeB {
+            color: #fbb03b;
+          }
+        }
+      }
+      &__body {
+        .shippingSpan {
+          position: relative;
+          display: block;
+          @include sp($point-sp) {
+            margin: 0 0 4px;
+          }
+          @include pc01($point-pc01) {
+            margin: 0 0 8px;
+          }
+          &--typeA {
+            color: #8cc63f;
+            @include sp($point-sp) {
+              left: 47%;
+              width: 100%;
+            }
+            @include pc01($point-pc01) {
+              left: 400px;
+              max-width: 295px;
+            }
+            .shippingSpan__stick {
+              background: #8cc63f;
+              &::after {
+                border-color: transparent transparent transparent #8cc63f;
+              }
+            }
+          }
+          &--typeB {
+            color: #fbb03b;
+            width: 100%;
+            .shippingSpan__stick {
+              background: #fbb03b;
+              &::after {
+                border-color: transparent transparent transparent #fbb03b;
+              }
+            }
+          }
+          &__stick {
+            display: inline-block;
+            position: relative;
+            @include sp($point-sp) {
+              width: 37%;
+              height: 12px;
+              margin: 0 0 2px;
+            }
+            @include pc01($point-pc01) {
+              width: 290px;
+              height: 24px;
+              margin: 0 0 8px;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              top: 0;
+              @include sp($point-sp) {
+                border-width: 6px 0 6px 5px;
+                right: -5px;
+              }
+              @include pc01($point-pc01) {
+                border-width: 12px 0 12px 11px;
+                right: -11px;
+              }
+            }
+            &Wrap {
+              display: flex;
+              justify-content: space-between;
+            }
+            &.haveNoArrow {
+              @include sp($point-sp) {
+                width: 7%;
+                height: 12px;
+              }
+              @include pc01($point-pc01) {
+                width: 42px;
+                height: 24px;
+              }
+              &::after {
+                display: none;
+              }
+            }
+            span {
+              display: none;
+            }
+          }
+          &__date {
+            display: block;
+            @include sp($point-sp) {
+              font-size: 9px;
+            }
+            @include pc01($point-pc01) {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__list {
+    &--typeA {
+      @include sp($point-sp) {
+        font-size: 12px;
+      }
+      @include pc01($point-pc01) {
+        font-size: 18px;
+      }
+      .listItem {
+        position: relative;
+        @include sp($point-sp) {
+          padding: 0 0 0 12px;
+          line-height: 1.8;
+          margin: 0 0 11px;
+        }
+        @include pc01($point-pc01) {
+          padding: 0 0 0 24px;
+          line-height: 2;
+          margin: 0 0 16px;
+        }
+        &::before {
+          content: "◎";
+          position: absolute;
+          left: 0;
+          @include sp($point-sp) {
+            font-size: 10px;
+          }
+          @include pc01($point-pc01) {
+            font-size: 20px;
+            top: -2px;
+          }
+        }
+      }
+    }
+    &--typeB {
+      font-size: 20px;
+      .listItem {
+        @include sp($point-sp) {
+          margin: 0;
+        }
+        @include pc01($point-pc01) {
+          margin: 0 0 40px;
+        }
+        &__head {
+          border-bottom: 1px solid;
+          @include sp($point-sp) {
+            font-size: 12px;
+            display: inline-block;
+            margin: 0 0 2px;
+          }
+          @include pc01($point-pc01) {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 10px;
+          }
+          .head {
+            &__left {}
+            &__right {
+              @include sp($point-sp) {
+                display: none;
+              }
+            }
+          }
+        }
+        &__body {
+          @include sp($point-sp) {
+            font-size: 10px;
+            margin: 0 0 5px;
+          }
+          @include pc01($point-pc01) {}
+        }
+        &__foot {
+          @include sp($point-sp) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    &--typeC {
+      .listItem {
+        position: relative;
+        @include sp($point-sp) {
+          font-size: 12px;
+          padding: 0 0 0 10px;
+        }
+        @include pc01($point-pc01) {
+          font-size: 14px;
+          padding: 0 0 0 14px;
+          margin: 0 0 3px;
+        }
+        &::before {
+          content: "・";
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+    &--typeD {
+      margin: 0 0 9px;
+      .listItem {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        border-bottom: 1px solid;
+        padding: 6px 0;
+        &__title {
+          @include sp($point-sp) {
+            font-size: 12px;
+          }
+        }
+        &__circleWrap {
+          display: flex;
+          .circle {
+            @include sp($point-sp) {
+              margin: 0 5px;
+              width: 12px;
+              height: 12px;
+            }
+          }
+        }
+      }
+    }
+    &__sub {
+      font-weight: normal;
+      .subInline {
+        display: flex;
+        align-items: center;
+        &Wrap {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        &__circle {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          margin: 0 5px 10px 0;
+        }
+        &__text {
+          display: inline-block;
+          font-size: 12px;
+          margin: 0 15px 10px 0;
+          &--ffd800 {
+            border-bottom: 2px solid #ffd800;
+          }
+          &--f4a000 {
+            border-bottom: 2px solid #f4a000;
+          }
+          &--6fb06b {
+            border-bottom: 2px solid #6fb06b;
+          }
+          &--d3bf9b {
+            border-bottom: 2px solid #d3bf9b;
+          }
+          &--75c4b4 {
+            border-bottom: 2px solid #75c4b4;
+          }
+          &--a8cf6a {
+            border-bottom: 2px solid #a8cf6a;
+          }
+          &--bbc3e3 {
+            border-bottom: 2px solid #bbc3e3;
+          }
+          &--f2a8c2 {
+            border-bottom: 2px solid #f2a8c2;
+          }
+        }
+      }
+    }
+  }
+  &__map {
+    position: relative;
+    @include sp($point-sp) {
+      margin: 0 0 20px;
+    }
+    @include pc01($point-pc01) {
+      margin: 50px 0;
+    }
+    .map {
+      &__text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        .text {
+          &Wrap {
+            @include sp($point-sp) {
+              border-bottom: 2px solid;
+              line-height: 18px;
+              margin: 0 0 10px;
+            }
+            @include pc01($point-pc01) {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 440px;
+              line-height: 30px;
+              margin: 0 0 16px;
+              border-bottom: 3px solid;
+            }
+            &.north {
+              border-color: #87e6ff;
+              & * {
+                border-color: #87e6ff;
+              }
+            }
+            &.central {
+              border-color: #ffb9e1;
+              & * {
+                border-color: #ffb9e1;
+              }
+            }
+            &.westSouth {
+              border-color: #aaf07d;
+              & * {
+                border-color: #aaf07d;
+              }
+            }
+            &.multiLine {
+              .text__fee {
+                & * {
+                  @include sp($point-sp) {
+                    border-bottom: 2px solid;
+                  }
+                  @include pc01($point-pc01) {
+                    border-bottom: 3px solid;
+                  }
+                  &:last-child {
+                    border: none;
+                  }
+                }
+              }
+              &.north {
+                & * {
+                  border-color: #87e6ff;
+                }
+              }
+              &.central {
+                & * {
+                  border-color: #ffb9e1;
+                }
+              }
+              &.westSouth {
+                & * {
+                  border-color: #aaf07d;
+                }
+              }
+            }
+          }
+          &__area {
+            @include sp($point-sp) {
+              border-bottom: 2px solid;
+              font-size: 12px;
+              line-height: 1.8;
+            }
+          }
+          &__fee {
+            @include sp($point-sp) {
+              font-size: 12px;
+              line-height: 1.8;
+            }
+          }
+        }
+      }
+      &__img {
+        @include sp($point-sp) {
+          padding: 60px 0 0;
+        }
+      }
+    }
+    &__detail {
+      @include sp($point-sp) {
+        line-height: 1.8;
+        margin: 0 0 20px;
+      }
+      @include pc01($point-pc01) {
+        line-height: 2;
+        margin: 0 0 72px;
+      }
+      .detail {
+        &Wrap {
+          @include sp($point-sp) {
+            margin: 0 0 15px;
+          }
+          @include pc01($point-pc01) {
+            margin: 0 0 30px;
+          }
+        }
+        &__head {
+          .head {
+            &__area {
+              border-bottom: 3px solid;
+              @include sp($point-sp) {
+                font-size: 12px;
+                display: inline-block;
+                margin: 0 0 5px;
+              }
+              @include pc01($point-pc01) {
+                padding: 0 0 5px;
+                margin: 0 10px 0 0;
+              }
+              &.north {
+                border-color: #87e6ff;
+              }
+              &.central {
+                border-color: #ffb9e1;
+              }
+              &.westSouth {
+                border-color: #aaf07d;
+              }
+            }
+            &__fee {
+              font-weight: normal;
+              @include sp($point-sp) {
+                font-size: 12px;
+                display: block;
+              }
+              .slash {
+                @include sp($point-sp) {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+        &__body {
+          font-weight: normal;
+          @include sp($point-sp) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  &__slider {
+    @include sp($point-sp) {
+      width: 100%;
+    }
+    .slider {
+      &__main {
+        @include sp($point-sp) {
+          margin: 0 0 25px;
+        }
+        @include pc01($point-pc01) {
+          margin: 0 0 50px;
+        }
+      }
+      &__thumbs {
+        @include sp($point-sp) {
+          width: 70%;
+          margin: 0 auto 25px;
+        }
+        @include pc01($point-pc01) {
+          width: 420px;
+          margin: 0 auto 50px;
+        }
+        .thumbs-slide {
+          @include sp($point-sp) {
+            margin: 0 1.5%;
+          }
+          @include pc01($point-pc01) {
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+select {
+  //  -webkit-appearance: none;
+  //  -moz-appearance: none;
+  //  appearance: none;
+    border: 1px solid $main-color;
+    color: $main-color;
+  //  line-height: 1;
+  font-weight: normal;
+  @include sp($point-sp) {
+    padding: 1px 4px;
+    font-size: 7.5px;
+    width: 122px;
+    border-radius: 2px;
+    height: 20px;
+  }
+  @include pc01($point-pc01) {
+    padding: 5.5px 8px;
+    width: 100%;
+    border-radius: 3px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    height: 28px;
+  }
+}
+
+//.select__arrow {
+//  position: absolute;
+//  top: 50%;
+//  @include sp($point-sp) {
+//    left: 144px;
+//  }
+//  @include pc01($point-pc01) {
+//    right: 20px;
+//  }
+//  &::after {
+//    content: "";
+//    position: absolute;
+//    background: url(http://sorrykoubou.jp/shop-pro/img/sub/select.svg) no-repeat;
+//    top: 50%;
+//    transform: translateY(-50%);
+//    z-index: -1;
+//    @include sp($point-sp) {
+//      width: 4px;
+//      height: 8.5px;
+//      right: 4px;
+//    }
+//    @include pc01($point-pc01) {
+//      width: 8px;
+//      height: 17px;
+//      right: 6px;
+//    }
+//  }
+//}
+input[type="number"] {
+  border: 1px solid $main-color;
+  color: $main-color;
+  text-align: right;
+  font-weight: normal;
+  line-height: 1;
+  @include sp($point-sp) {
+    width: 30px;
+    border-radius: 2px;
+    height: 20px;
+    font-size: 7.5px;
+    padding: 0 5px 0 0;
+  }
+  @include pc01($point-pc01) {
+    width: 48px;
+    height: 28px;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 0 8px 0 0;
+  }
+}
+
+.menuOn__bg {
+  display: none;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background: rgba(255, 255, 255, .95);
+  z-index: 100;
+}

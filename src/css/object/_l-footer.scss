@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc01($point-pc01) {}
+@include pc02($point-pc02) {}
+*/
+
+.l-pagetop {
+  @include sp($point-sp) {
+    display: none !important;
+  }
+  @include pc01($point-pc01) {
+    right: 60px;
+    position: fixed;
+    bottom: 50px;
+  }
+  &.footerFixed {
+    @include pc01($point-pc01) {
+      position: absolute;
+      bottom: 150px;
+    }
+  }
+  a {
+    @include pc01($point-pc01) {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: url(http://sorrykoubou.jp/shop-pro/img/common/toppage_arrow.svg) no-repeat;
+    }
+  }
+  span {
+    display: none;
+  }
+}
+
+.l-footer {
+  position: relative;
+  &__rule,
+  &__menu {
+    display: none;
+  }
+  &__inner {
+    background: #0000c8;
+    text-align: center;
+    @include sp($point-sp) {
+      padding: 19px 0 7px;
+      line-height: 0;
+    }
+    @include pc01($point-pc01) {
+      padding: 77px 0 23px;
+      width: 100%;
+      min-width: 1172px;
+    }
+    img {
+      @include sp($point-sp) {
+        width: 154px;
+        height: 4px;
+      }
+    }
+  }
+}

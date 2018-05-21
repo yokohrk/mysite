@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/*
+@include sp($point-sp) {}
+@include tb($point-tb) {}
+@include pc01($point-pc01) {}
+@include pc02($point-pc02) {}
+*/
+
+.c-btn {
+  display: inline-block;
+  transition: opacity .2s;
+  border: none;
+  @include sp($point-sp) {
+    font-size: 12px;
+    // height: 25px;
+  }
+  @include pc01($point-pc01) {
+    font-size: 17px;
+    min-width: 280px;
+    height: 50px;
+    line-height: 50px;
+  }
+  &:hover {
+    text-decoration: none;
+    opacity: .7;
+  }
+  &--blue {
+    color: #fff;
+    background: #0000c8;
+    @include sp($point-sp) {
+      line-height: 25px;
+    }
+  }
+  &--white {
+    color: #0000c8;
+    background: #fff;
+    @include sp($point-sp) {
+      line-height: 23px;
+      border: 1px solid;
+      // height: 25px;
+    }
+    @include pc01($point-pc01) {
+      border: 1px solid;
+      line-height: 46px;
+      height: 48px;
+    }
+  }
+  &--noBorder {
+    color: $main-color;
+  }
+  &.w280 {
+    @include sp($point-sp) {
+      width: 140px;
+    }
+    @include pc01($point-pc01) {
+      width: 280px;
+    }
+  }
+  &.w350 {
+    @include sp($point-sp) {
+      width: 175px;
+    }
+    @include pc01($point-pc01) {
+      width: 350px;
+    }
+  }
+  &.w454 {
+    @include sp($point-sp) {
+      width: 227px;
+    }
+    @include pc01($point-pc01) {
+      width: 454px;
+    }
+  }
+  &.SPw100per {
+    @include sp($point-sp) {
+      width: 100%;
+    }
+  }
+}
+
+c-categorylist{}
