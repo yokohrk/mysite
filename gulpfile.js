@@ -19,7 +19,7 @@ $ = require('gulp-load-plugins')();
 //    gulp-notify エラーを通知
 //    gulp-load-plugins パッケージを読み込み
 //    gulp-plumber エラーが出たときにgulpを終了させない
-//    gulp-rename 
+//    gulp-rename
 //    imagemin-pngquant png圧縮
 
 //gulp-webserver【1】LiveReload環境構築
@@ -150,19 +150,23 @@ gulp.task('watch', function () {
 gulp.task('default', ['html', 'auto', 'image', 'webserver', 'js', 'watch']);
 
 
-//gulp-sourcemaps 【10】FTP upload
-var gulp = require('gulp');
-var sftp = require('gulp-sftp');
+//vinyl-ftp 【10】FTP upload
+// const gulp = require('gulp');
+const ftp = require('vinyl-ftp');
 
-gulp.task('upload', function () {
-    return gulp.src([
-        'dist/**/*'
-    ])
-        .pipe(sftp({
-            host: "133.130.64.128",
-            user: "sd1037820@gmoserver.jp",
-            pass: "P44$rqnH",
-            remotePath: "/export/sd218/www/jp/r/e/gmoserver/2/0/sd1037820/kando-teller.jp"
-        })
-    );
-});
+gulp.task('ftp', () => {
+  const ftpConfig = {
+    host: 'ftp19.gmoserver.jp',
+    user: 'sd1037820@gmoserver.jp',
+    pass: 'P44$rqnH',
+  }
+
+  const connect = ftp.create(ftpConfig);
+
+  const ftpUploadFiles = './dist/**/*';
+
+  const remoteDistDir = 'kando-teller.jp';
+
+  return gulp.src(ftpUploadFiles)
+    .pipe(connect.dest(remoteDistDir));
+})
