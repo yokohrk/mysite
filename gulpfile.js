@@ -149,10 +149,11 @@ gulp.task('watch', function () {
 
 gulp.task('default', ['html', 'auto', 'image', 'webserver', 'js', 'watch']);
 
+
+//gulp-sourcemaps 【10】FTP upload
 var gulp = require('gulp');
 var sftp = require('gulp-sftp');
 
-//gulp-sourcemaps 【10】FTP upload
 gulp.task('upload', function () {
     return gulp.src([
         'dist/**/*'
@@ -161,7 +162,7 @@ gulp.task('upload', function () {
             host: "133.130.64.128",
             user: "sd1037820@gmoserver.jp",
             pass: "P44$rqnH",
-            remotePath: "/"
+            remotePath: "/export/sd218/www/jp/r/e/gmoserver/2/0/sd1037820/kando-teller.jp"
         })
     );
 });
