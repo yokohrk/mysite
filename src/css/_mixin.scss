@@ -115,3 +115,17 @@ $point-pc02: 1280px;
   @include boxSizing;
   width: 100%;
 }
+
+//testAnimation
+// @mixin animTest {
+//   @media screen and (max-width: $point-sp) {
+//     @content;
+//   }
+// }
+@mixin nth-trans-delay($delay_items: 7, $delay_time: 0.2s){
+  @for $i from 1 through $delay_items {
+    &:nth-child(#{$i}) {
+     transition-delay: $delay_time * $i;
+    }
+  }
+}
